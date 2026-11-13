@@ -174,7 +174,7 @@ def main():
                         active_template["song"]
                     )
 
-                    edit_start = current_time
+                    edit_start = time.monotonic()
 
                     state = EDITING
 

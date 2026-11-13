@@ -10,10 +10,14 @@ from pathlib import Path
 EDIT_DURATION = 10
 
 SONG_BPM = {
-    "edit_1": 130,
+    "edit_1": 129.3,
     "edit_2": 134,
+    "edit_3": 103,
 }
 
+SONG_DURATION = {
+    "edit_3": 14.6,
+}
 
 def get_templates(project_root):
 
@@ -33,7 +37,7 @@ def get_templates(project_root):
             "name": name,
             "song": str(song),
             "bpm": SONG_BPM.get(name, 120),
-            "duration": EDIT_DURATION
+            "duration": SONG_DURATION.get(name, EDIT_DURATION)
         })
 
     return templates
